@@ -1,6 +1,13 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-core"
+  [plugins.inputs]
+    node_bundler = "esbuild"
+    external_node_modules = ["faunadb"]
 
 # 共有URLのパスパターンを処理するためのリダイレクトルール
 [[redirects]]
@@ -19,6 +26,5 @@
 [functions]
   directory = "netlify/functions"
 
-# Goバージョンの指定を追加
 [context.production.environment]
   GO_VERSION = "1.19"

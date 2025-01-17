@@ -22,6 +22,3 @@
 # Goバージョンの指定を追加
 [context.production.environment]
   GO_VERSION = "1.19"
-
-[functions]
-  external_node_modules = ["faunadb"]

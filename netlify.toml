@@ -18,3 +18,7 @@
 
 [functions]
   directory = "netlify/functions"
+
+# Goバージョンの指定を追加
+[context.production.environment]
+  GO_VERSION = "1.19"
